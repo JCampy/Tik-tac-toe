@@ -17,9 +17,6 @@ public class Main {
         
         Board bs = new Board();
         bs.makeBoard(); 
-        
-        System.out.println(bs.getSpecificTile(0, 0));
-        // bs.setBoard(0,0,10);
         bs.printBoard();
        
         
