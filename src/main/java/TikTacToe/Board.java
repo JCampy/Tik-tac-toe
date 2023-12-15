@@ -12,8 +12,8 @@ public class Board {
     
     // creating board details 
     // for mock tic-tac-toe board
-    private static final int board_width = 3; 
-    private static final int board_length = 3;
+    private final int board_width = 3; 
+    private final int board_length = 3;
     
     // Create the matrix
     private char[][] tTTBoard = new char[board_width][board_length];
@@ -67,6 +67,16 @@ public class Board {
             }
         // Printing final outer wall
         System.out.println("-------------");
+    }
+    
+    // Getter for board width
+    public int getBoard_width(){
+        return this.board_width;
+    }
+    
+    // Getter for board_length
+    public int getBoard_Length(){
+        return this.board_length;
     }
     
         
