@@ -16,7 +16,7 @@ public class Board {
     private static final int board_length = 3;
     
     // Create the matrix
-    private int[][] tTTBoard = new int[board_width][board_length];
+    private char[][] tTTBoard = new char[board_width][board_length];
     
     public Board(){
         // Nothing needed for 
@@ -36,7 +36,7 @@ public class Board {
     } 
     
     // Public method for returing the entire board
-    public int[][] getBoard(){
+    public char[][] getBoard(){
         return this.tTTBoard;
     }
     
@@ -48,14 +48,15 @@ public class Board {
     
     // Public method that changes a specific value in a tile
     // from the game board
-    public void setSpeicifcTile(int i, int j, int value) {
+    public void setSpeicifcTile(int i, int j, char value) {
         this.tTTBoard[i][j] = value;
     }
     
     // Printing the game board 
     public void printBoard(){
-        System.out.println("----------------");
+       // Nested for loop that creates the inner and outer walls
         for (int i = 0; i < board_width; i++) {
+            System.out.println("-------------");
             System.out.print("| ");
             for (int j = 0; j < board_length; j++) {
 
@@ -64,7 +65,8 @@ public class Board {
                 }
             System.out.println();
             }
-        System.out.println("----------------");
+        // Printing final outer wall
+        System.out.println("-------------");
     }
     
         
