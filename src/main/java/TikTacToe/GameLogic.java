@@ -72,12 +72,51 @@ public class GameLogic {
         }
     }
     
-    public boolean isLegal(char[][] arr){
-        if (arr)
-        return
-    }
-    public String gameWon(){
+    public boolean isLegal(char[][] arr, int i, int j){
+        if (arr[i][j] == ' '){
+           return true; 
+        }
+        else{
+            return false;
+        }
         
+    }
+    public boolean gameWon(char[][] arr){
+        int countX = 0;
+        int countO = 0;
+        String won;
+        
+        // Checking horizontal
+        for(int i=0; i<gb.getBoard_width(); i++){
+            for (int j=0; j<gb.getBoard_width(); j++){
+                if(arr[i][j] == 'X'){
+                    countX++;
+                }
+                else if(arr[i][j] == 'O'){
+                    countO++;
+                }
+            }
+            
+            if(countX == 3){
+            won = "Y";
+            }
+            
+        }
+        
+        
+        // Checking Vertical
+        for(int i=0; i<gb.getBoard_width(); i++){
+            for (int j=0; j<gb.getBoard_width(); j++){
+                if(arr[j][i] == 'X'){
+                    countX++;
+                }
+                else if(arr[j][i] == 'O'){
+                    countO++;
+                }
+            }
+        }
+        
+       
     }
     
     public int convertInput(int i){
