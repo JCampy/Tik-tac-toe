@@ -10,14 +10,16 @@ package TikTacToe;
  */
 public class Player {
     
-    // X or Y for player
+    // X or O for player
+    private char x = 'X';
+    private char o = 'O';
     private int playerNum;
     private char playerID;
     
     // Constructor for player 
     public Player(){
         this.playerNum = 1; // Initialize player number to 1
-        this.playerID = 'x'; // Default player is x  
+        this.playerID = this.x; // Default player is x  
     }
     
     // Getter for player ID 
@@ -38,5 +40,12 @@ public class Player {
     // Setter for player Number
     public void setPlayerNum(int num){
         this.playerNum = num; 
+    }
+    
+    public char getX(){
+        return this.x;
+    }
+    public char getO(){
+        return this.o;
     }
 }
